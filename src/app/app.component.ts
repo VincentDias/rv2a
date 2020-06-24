@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { MessageService } from './shared/service/message.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rv2a';
+  title = 'websocket-frontend';
+  input;
+  constructor(public messageService: MessageService) {}
+  sendMessage() {
+    if (this.input) {
+      this.messageService.sendMessage(this.input);
+      this.input = '';
+    }
+  }
 }
