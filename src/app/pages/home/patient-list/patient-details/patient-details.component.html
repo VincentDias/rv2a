@@ -4,17 +4,23 @@
 
 <div class="details-containers">
     <div class="row">
-        patientName and lastname
+        <h2>
+            {{patients.firstName}} {{patients.lastName}}
+        </h2>
     </div>
     <div class="row">
         address
     </div>
     <div class="row">
-        <app-chat-historic></app-chat-historic>
+        Social security number: {{patients.socialSecurityNo}}
     </div>
     <div class="row">
-        <a mat-button routerLink="/chat" routerLinkActive="active">Chat</a>
-        <button mat-button>Back</button>
+        <app-chat-historic></app-chat-historic>
+        <app-sms-historic></app-sms-historic>
+    </div>
+    <div class="row">
+        <button _ngcontent-fxv-c10 mat-raised-button="" color="primary" routerLink="/chat" routerLinkActive="active">Chat</button>
+        <button _ngcontent-fxv-c10 mat-raised-button="" color="secondary" routerLink="/chat" routerLinkActive="active">Back</button>
     </div>
     <div class="row">
         <app-sms-editor></app-sms-editor>

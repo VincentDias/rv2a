@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -18,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { PatientDetailsComponent } from './pages/home/patient-list/patient-details/patient-details.component';
 import { ChatHistoricComponent } from './pages/home/patient-list/patient-details/chat-historic/chat-historic.component';
 import { SmsEditorComponent } from './pages/home/patient-list/patient-details/sms-editor/sms-editor.component';
+import { SmsHistoricComponent } from './pages/home/patient-list/patient-details/sms-historic/sms-historic.component';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { SmsEditorComponent } from './pages/home/patient-list/patient-details/sm
     ChatComponent,
     PatientDetailsComponent,
     ChatHistoricComponent,
-    SmsEditorComponent
+    SmsEditorComponent,
+    SmsHistoricComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { SmsEditorComponent } from './pages/home/patient-list/patient-details/sm
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    HttpClientModule
   ],
   providers: [],
   schemas: [

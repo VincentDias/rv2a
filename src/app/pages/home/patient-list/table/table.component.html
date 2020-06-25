@@ -1,7 +1,7 @@
 <div>
 	<mat-form-field>
 		<mat-label>Filter</mat-label>
-		<input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+		<input matInput (keyup)="applyFilter($event)" placeholder="Start typing a name">
 	</mat-form-field>
 </div>
 
@@ -24,7 +24,7 @@
 			Name
 		</mat-header-cell>
 		<mat-cell *matCellDef="let element">
-			{{element.name}}
+			{{element.firstName}}
 		</mat-cell>
 	</ng-container>
 
@@ -34,7 +34,7 @@
 			Lastname
 		</mat-header-cell>
 		<mat-cell *matCellDef="let element">
-			{{element.lastname}}
+			{{element.lastName}}
 		</mat-cell>
 	</ng-container>
 
@@ -43,7 +43,7 @@
 			Patient details
 		</mat-header-cell>
 		<mat-cell *matCellDef="let element">
-			<a routerLink="/patient-details" routerLinkActive="active">Details</a>
+			<a routerLink="/patient-details" [state]="{ id: element.id }" routerLinkActive="active" >Details</a>
 		</mat-cell>
 	</ng-container>
 
