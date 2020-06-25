@@ -2,7 +2,6 @@
 	<mat-form-field>
 		<mat-label>Filter</mat-label>
 		<input matInput (keyup)="applyFilter($event)" placeholder="Start typing a name">
-
 	</mat-form-field>
 </div>
 
@@ -10,45 +9,42 @@
 	[dataSource]="dataSource" class="mat-elevation-z8">
 
 	<!-- Id Column -->
-	<ng-container matColumnDef="id">
-		<mat-header-cell *matHeaderCellDef>
+	<ng-container matcolumndef="id">
+		<mat-header-cell *matheadercelldef>
 			Id.
 		</mat-header-cell>
-		<mat-cell *matCellDef="let element">
+		<mat-cell *matcelldef="let element">
 			{{element.id}}
 		</mat-cell>
 	</ng-container>
 
 	<!-- firstName Column -->
-	<ng-container matColumnDef="firstname">
-		<mat-header-cell *matHeaderCellDef>
+	<ng-container matcolumndef="firstname">
+		<mat-header-cell *matheadercelldef>
 			Name
 		</mat-header-cell>
 		<mat-cell *matCellDef="let element">
 			{{element.firstName}}
-
 		</mat-cell>
 	</ng-container>
 
 	<!-- lastname Column -->
-	<ng-container matColumnDef="lastname">
-		<mat-header-cell *matHeaderCellDef>
+	<ng-container matcolumndef="lastname">
+		<mat-header-cell *matheadercelldef>
 			Lastname
 		</mat-header-cell>
 		<mat-cell *matCellDef="let element">
 			{{element.lastName}}
-
 		</mat-cell>
 	</ng-container>
 
 	<!-- details Column -->
-	<ng-container matColumnDef="details">
-		<mat-header-cell *matHeaderCellDef>
+	<ng-container matcolumndef="details">
+		<mat-header-cell *matheadercelldef>
 			Patient details
 		</mat-header-cell>
 		<mat-cell *matCellDef="let element">
 			<a routerLink="/details" [state]="{ id: element.id }" routerLinkActive="active" >Details</a>
-
 		</mat-cell>
 	</ng-container>
 
