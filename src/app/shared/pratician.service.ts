@@ -7,11 +7,11 @@ import { Injectable } from '@angular/core';
 
 export class PraticianService {
 
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
-  private url = 'http://localhost:8082/';
+  private url = 'http://localhost:8081/';
 
-  getPraticians(){
+  getPraticians() {
     return this.http.get(this.url + 'praticians');
   }
 

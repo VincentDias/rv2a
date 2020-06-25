@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './pages/home/patient-list/table/table.component';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { PatientListComponent } from './pages/home/patient-list/patient-list.component';
 import { ChatComponent } from './pages/home/patient-list/chat/chat.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -28,7 +27,6 @@ import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
-    PatientListComponent,
     TableComponent,
     ChatComponent,
     PatientDetailsComponent,
@@ -36,10 +34,6 @@ import { MatIconModule } from '@angular/material/icon';
     SmsEditorComponent,
     SmsHistoricComponent,
     RegisterComponent,
-    MatCardModule,
-    MatTabsModule,
-    MatCheckboxModule,
-    MatIconModule
   ],
   imports: [
     BrowserModule,
@@ -54,7 +48,11 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     MatTabsModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    MatIconModule,
   ],
   providers: [],
   schemas: [

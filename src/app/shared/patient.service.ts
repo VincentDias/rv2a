@@ -7,15 +7,15 @@ import { Injectable } from '@angular/core';
 
 export class PatientService {
 
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
-  private url = 'http://localhost:8082/';
+  private url = 'http://localhost:8081/';
 
-  getPatients(){
+  getPatients() {
     return this.http.get(this.url + 'patients');
   }
 
-  getPatient(id){
+  getPatient(id) {
     return this.http.get(this.url + 'patients/' + id);
   }
 }

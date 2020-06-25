@@ -1,5 +1,6 @@
 import { PatientService } from './../../../../shared/patient.service';
 import { Component, OnInit } from '@angular/core';
+import { Patient } from 'src/app/model/patient';
 
 export interface PeriodicElement {
   id: number;
@@ -21,6 +22,8 @@ export class TableComponent implements OnInit {
   displayedColumns: string[] = ['id', 'firstname', 'lastname', 'details'];
   dataSource;
   patients;
+
+  model: Patient = new Patient();
 
   ngOnInit(): void {
     this.patients = this.patientService.getPatients().subscribe(data => {
