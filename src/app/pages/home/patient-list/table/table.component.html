@@ -1,9 +1,7 @@
 <div>
 	<mat-form-field>
-		<mat-label>Filter</mat-label>
-
+		<mat-label>Filtrer</mat-label>
 		<input matinput (keyup)="applyFilter($event)" placeholder="Start typing a name">
-
 	</mat-form-field>
 </div>
 
@@ -20,37 +18,35 @@
 		</mat-cell>
 	</ng-container>
 
-	<!-- Name Column -->
-	<ng-container matcolumndef="name">
+	<!-- firstName Column -->
+	<ng-container matcolumndef="firstname">
 		<mat-header-cell *matheadercelldef>
 			Name
 		</mat-header-cell>
 
 		<mat-cell *matcelldef="let element">
 			{{element.firstName}}
-
 		</mat-cell>
 	</ng-container>
 
-	<!-- Weight Column -->
+	<!-- lastname Column -->
 	<ng-container matcolumndef="lastname">
 		<mat-header-cell *matheadercelldef>
 			Lastname
 		</mat-header-cell>
 
 		<mat-cell *matcelldef="let element">
-			{{element.lastname}}
+			{{element.lastName}}
 		</mat-cell>
 	</ng-container>
 
+	<!-- details Column -->
 	<ng-container matcolumndef="details">
 		<mat-header-cell *matheadercelldef>
 			Patient details
 		</mat-header-cell>
-
 		<mat-cell *matcelldef="let element">
-			<a routerlink="/patient-details" [state]="{ id: element.id }" routerlinkactive="active">Details</a>
-
+			<a routerlink="/details" [state]="{ id: element.id }" routerlinkactive="active">Details</a>
 		</mat-cell>
 	</ng-container>
 

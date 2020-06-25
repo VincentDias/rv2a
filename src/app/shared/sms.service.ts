@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { Sms } from '../models/sms';
 
 @Injectable({
   providedIn: 'root'
@@ -7,15 +9,15 @@ import { Injectable } from '@angular/core';
 
 export class SmsService {
 
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
-  private url = 'http://localhost:8082/';
+  private url = 'http://localhost:8080/sms';
 
-  getAllSms(){
+  getAllSms() {
     return this.http.get(this.url + 'sms');
   }
 
-  postSms(message){
+  postSms(sms: Sms) {
     return this.http.post(this.url + 'sms', message);
   }
 }

@@ -18,7 +18,7 @@ export interface PeriodicElement {
 export class TableComponent implements OnInit{
   constructor(private patientService: PatientService) { }
 
-  displayedColumns: string[] = ['id', 'name', 'lastname', 'details'];
+  displayedColumns: string[] = ['id', 'firstname', 'lastname', 'details'];
   dataSource;
   patients;
 
