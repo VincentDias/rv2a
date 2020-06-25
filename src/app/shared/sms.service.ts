@@ -11,7 +11,7 @@ export class SmsService {
 
   constructor(private http: HttpClient) { }
 
-  private url = 'http://localhost:8080/sms';
+  private url = 'http://localhost:8082/sms';
 
   getAllSms() {
     return this.http.get(this.url + 'sms');

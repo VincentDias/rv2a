@@ -35,11 +35,7 @@ import { MatIconModule } from '@angular/material/icon';
     ChatHistoricComponent,
     SmsEditorComponent,
     SmsHistoricComponent,
-    RegisterComponent,
-    MatCardModule,
-    MatTabsModule,
-    MatCheckboxModule,
-    MatIconModule
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +48,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatFormFieldModule,
     HttpClientModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatCardModule,
     MatTabsModule,
     MatCheckboxModule,
     MatIconModule
