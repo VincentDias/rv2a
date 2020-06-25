@@ -16,6 +16,7 @@ export class SmsService {
   getAllSms() {
     return this.http.get(this.url + 'sms');
   }
+}
 
 //   postSms(sms: Sms) {
 //     return this.http.post(this.url + 'sms', sms);
