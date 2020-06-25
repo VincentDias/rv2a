@@ -20,6 +20,7 @@ import { PatientDetailsComponent } from './pages/home/patient-list/patient-detai
 import { ChatHistoricComponent } from './pages/home/patient-list/patient-details/chat-historic/chat-historic.component';
 import { SmsEditorComponent } from './pages/home/patient-list/patient-details/sms-editor/sms-editor.component';
 import { SmsHistoricComponent } from './pages/home/patient-list/patient-details/sms-historic/sms-historic.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SmsHistoricComponent } from './pages/home/patient-list/patient-details/
     PatientDetailsComponent,
     ChatHistoricComponent,
     SmsEditorComponent,
-    SmsHistoricComponent
+    SmsHistoricComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
