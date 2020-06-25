@@ -6,12 +6,12 @@
 				<mat-card-content>
 					<form (ngSubmit)="onSubmit()">
 						<mat-form-field>
-							<input matinput placeholder="Email" required name="email" ngModel #email="ngModel">
-							<mat-error *ngIf="email.invalid">Email is required</mat-error>
+							<input matinput placeholder="identifiant" required name="identifiant" [(ngModel)]="model.identifiant">
+							<mat-error *ngIf="identifiant.invalid">Identifiant is required</mat-error>
 							<mat-icon matsuffix>email</mat-icon>
 						</mat-form-field>
 						<mat-form-field>
-							<input matinput placeholder="Password" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+							<input matinput placeholder="Password" type="password" required minlength="6" name="password" [(ngModel)]="model.password">
 							<mat-error *ngIf="password.errors && password.errors.required">
 								Password is required
 							</mat-error>
@@ -35,20 +35,20 @@
 				<mat-card-content>
 					<form action="">
 						<mat-form-field>
-							<input matinput placeholder="User Name" required name="username" ngModel #username="ngModel">
+							<input matinput placeholder="identifiant" required name="identifiant" [(ngModel)]="model.identifiant">
 							<mat-icon matsuffix>perm_identity</mat-icon>
-							<mat-error *ngIf="username.invalid">
-								Username is required
+							<mat-error *ngIf="identifiant.invalid">
+								Identifiant is required
 							</mat-error>
 
 						</mat-form-field>
 						<mat-form-field>
-							<input matinput placeholder="Email" required name="email" ngModel #email="ngModel">
+							<input matinput placeholder="Email" required name="email" [(ngModel)]="model.email">
 							<mat-error *ngIf="email.invalid">Email is required</mat-error>
 							<mat-icon matsuffix>email</mat-icon>
 						</mat-form-field>
 						<mat-form-field>
-							<input matinput placeholder="Password" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+							<input matinput placeholder="Password" type="password" required minlength="6" name="password" [(ngModel)]="model.password">
 							<mat-error *ngIf="password.errors && password.errors.required">
 								Password is required
 							</mat-error>
@@ -58,13 +58,7 @@
 							<mat-icon matsuffix>lock</mat-icon>
 
 						</mat-form-field>
-						<mat-form-field>
-							<input matinput placeholder="Password" type="password" required minlength="6" name="repassword" ngModel #repassword="ngModel">
-							<mat-error *ngIf="repassword.errors && repassword.errors.required">
-								Re-Enter Password is required
-							</mat-error>
-							<mat-icon matsuffix>lock</mat-icon>
-						</mat-form-field>
+
 						<button mat-raised-button color="primary" class="login-button">
 							Sign Up
 						</button>

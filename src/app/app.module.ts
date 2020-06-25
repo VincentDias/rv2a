@@ -7,10 +7,8 @@ import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './pages/home/patient-list/table/table.component';
-import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { SignUpComponent } from './pages/login/sign-up/sign-up.component';
 import { PatientListComponent } from './pages/home/patient-list/patient-list.component';
 import { ChatComponent } from './pages/home/patient-list/chat/chat.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,6 +19,10 @@ import { ChatHistoricComponent } from './pages/home/patient-list/patient-details
 import { SmsEditorComponent } from './pages/home/patient-list/patient-details/sms-editor/sms-editor.component';
 import { SmsHistoricComponent } from './pages/home/patient-list/patient-details/sms-historic/sms-historic.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -28,14 +30,16 @@ import { RegisterComponent } from './pages/register/register.component';
     AppComponent,
     PatientListComponent,
     TableComponent,
-    LoginComponent,
-    SignUpComponent,
     ChatComponent,
     PatientDetailsComponent,
     ChatHistoricComponent,
     SmsEditorComponent,
     SmsHistoricComponent,
-    RegisterComponent
+    RegisterComponent,
+    MatCardModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
   imports: [
     BrowserModule,
@@ -44,11 +48,13 @@ import { RegisterComponent } from './pages/register/register.component';
     BrowserAnimationsModule,
     MatTableModule,
     MatToolbarModule,
-    FormsModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
   providers: [],
   schemas: [

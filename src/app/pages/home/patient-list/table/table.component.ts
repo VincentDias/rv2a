@@ -15,7 +15,7 @@ export interface PeriodicElement {
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit{
+export class TableComponent implements OnInit {
   constructor(private patientService: PatientService) { }
 
   displayedColumns: string[] = ['id', 'firstname', 'lastname', 'details'];
@@ -23,7 +23,7 @@ export class TableComponent implements OnInit{
   patients;
 
   ngOnInit(): void {
-    this.patients = this.patientService.getPatients().subscribe( data => {
+    this.patients = this.patientService.getPatients().subscribe(data => {
       this.dataSource = data;
     });
   }
