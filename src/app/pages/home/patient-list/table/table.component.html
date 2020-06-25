@@ -1,11 +1,7 @@
 <div>
 	<mat-form-field>
 		<mat-label>Filter</mat-label>
-<<<<<<< HEAD
 		<input matInput (keyup)="applyFilter($event)" placeholder="Start typing a name">
-=======
-		<input matinput (keyup)="applyFilter($event)" placeholder="Ex. ium">
->>>>>>> 3788e4bf86aad94dba1c0a58adad7e43afe5afe7
 	</mat-form-field>
 </div>
 
@@ -13,59 +9,45 @@
 	[dataSource]="dataSource" class="mat-elevation-z8">
 
 	<!-- Id Column -->
-	<ng-container matcolumndef="id">
-		<mat-header-cell *matheadercelldef>
+	<ng-container matColumnDef="id">
+		<mat-header-cell *matHeaderCellDef>
 			Id.
 		</mat-header-cell>
-		<mat-cell *matcelldef="let element">
+		<mat-cell *matCellDef="let element">
 			{{element.id}}
 		</mat-cell>
 	</ng-container>
 
-	<!-- Name Column -->
-	<ng-container matcolumndef="name">
-		<mat-header-cell *matheadercelldef>
+	<!-- firstName Column -->
+	<ng-container matColumnDef="firstname">
+		<mat-header-cell *matHeaderCellDef>
 			Name
 		</mat-header-cell>
-<<<<<<< HEAD
 		<mat-cell *matCellDef="let element">
 			{{element.firstName}}
-=======
-		<mat-cell *matcelldef="let element">
-			{{element.name}}
->>>>>>> 3788e4bf86aad94dba1c0a58adad7e43afe5afe7
 		</mat-cell>
 	</ng-container>
 
-	<!-- Weight Column -->
-	<ng-container matcolumndef="lastname">
-		<mat-header-cell *matheadercelldef>
+	<!-- lastname Column -->
+	<ng-container matColumnDef="lastname">
+		<mat-header-cell *matHeaderCellDef>
 			Lastname
 		</mat-header-cell>
-<<<<<<< HEAD
 		<mat-cell *matCellDef="let element">
 			{{element.lastName}}
-=======
-		<mat-cell *matcelldef="let element">
-			{{element.lastname}}
->>>>>>> 3788e4bf86aad94dba1c0a58adad7e43afe5afe7
 		</mat-cell>
 	</ng-container>
 
-	<ng-container matcolumndef="details">
-		<mat-header-cell *matheadercelldef>
+	<!-- details Column -->
+	<ng-container matColumnDef="details">
+		<mat-header-cell *matHeaderCellDef>
 			Patient details
 		</mat-header-cell>
-<<<<<<< HEAD
 		<mat-cell *matCellDef="let element">
-			<a routerLink="/patient-details" [state]="{ id: element.id }" routerLinkActive="active" >Details</a>
-=======
-		<mat-cell *matcelldef="let element">
-			<a routerlink="/patient-details" routerlinkactive="active">Details</a>
->>>>>>> 3788e4bf86aad94dba1c0a58adad7e43afe5afe7
+			<a routerLink="/details" [state]="{ id: element.id }" routerLinkActive="active" >Details</a>
 		</mat-cell>
 	</ng-container>
 
-	<mat-header-row *matheaderrowdef="displayedColumns"></mat-header-row>
-	<mat-row *matrowdef="let row; columns: displayedColumns;"></mat-row>
+	<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+	<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
