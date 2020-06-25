@@ -1,11 +1,9 @@
 <div>
 	<mat-form-field>
 		<mat-label>Filter</mat-label>
-<<<<<<< HEAD
-		<input matInput (keyup)="applyFilter($event)" placeholder="Start typing a name">
-=======
-		<input matinput (keyup)="applyFilter($event)" placeholder="Ex. ium">
->>>>>>> 3788e4bf86aad94dba1c0a58adad7e43afe5afe7
+
+		<input matinput (keyup)="applyFilter($event)" placeholder="Start typing a name">
+
 	</mat-form-field>
 </div>
 
@@ -27,13 +25,10 @@
 		<mat-header-cell *matheadercelldef>
 			Name
 		</mat-header-cell>
-<<<<<<< HEAD
-		<mat-cell *matCellDef="let element">
-			{{element.firstName}}
-=======
+
 		<mat-cell *matcelldef="let element">
-			{{element.name}}
->>>>>>> 3788e4bf86aad94dba1c0a58adad7e43afe5afe7
+			{{element.firstName}}
+
 		</mat-cell>
 	</ng-container>
 
@@ -42,13 +37,9 @@
 		<mat-header-cell *matheadercelldef>
 			Lastname
 		</mat-header-cell>
-<<<<<<< HEAD
-		<mat-cell *matCellDef="let element">
-			{{element.lastName}}
-=======
+
 		<mat-cell *matcelldef="let element">
 			{{element.lastname}}
->>>>>>> 3788e4bf86aad94dba1c0a58adad7e43afe5afe7
 		</mat-cell>
 	</ng-container>
 
@@ -56,13 +47,10 @@
 		<mat-header-cell *matheadercelldef>
 			Patient details
 		</mat-header-cell>
-<<<<<<< HEAD
-		<mat-cell *matCellDef="let element">
-			<a routerLink="/patient-details" [state]="{ id: element.id }" routerLinkActive="active" >Details</a>
-=======
+
 		<mat-cell *matcelldef="let element">
-			<a routerlink="/patient-details" routerlinkactive="active">Details</a>
->>>>>>> 3788e4bf86aad94dba1c0a58adad7e43afe5afe7
+			<a routerlink="/patient-details" [state]="{ id: element.id }" routerlinkactive="active">Details</a>
+
 		</mat-cell>
 	</ng-container>
 
