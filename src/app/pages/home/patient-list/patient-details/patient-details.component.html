@@ -1,22 +1,30 @@
 <div class="title-container">
-	<h1>Patient details</h1>
+  <h1>Patient details</h1>
 </div>
 
 <div class="details-containers">
-    <div class="row">
-        patientName and lastname
-    </div>
-    <div class="row">
-        address
-    </div>
-    <div class="row">
-        <app-chat-historic></app-chat-historic>
-    </div>
-    <div class="row">
-        <a mat-button routerLink="/chat" routerLinkActive="active">Chat</a>
-        <button mat-button>Back</button>
-    </div>
-    <div class="row">
-        <app-sms-editor></app-sms-editor>
-    </div>
+  <div class="row">
+    <h2>
+      {{patients.firstName}} {{patients.lastName}}
+    </h2>
+  </div>
+  <div class="row">
+    address
+  </div>
+  <div class="row">
+    Social security number: {{patients.socialSecurityNo}}
+  </div>
+  <div class="row">
+    <button _ngcontent-fxv-c10 mat-raised-button="" color="primary" routerLink="/chat/{{patients.id}}">Chat</button>
+    <button _ngcontent-fxv-c10 mat-raised-button="" color="secondary" routerLink="/chat">Back</button>
+    <button _ngcontent-fxv-c10 mat-raised-button="" color="warning">Modify</button>
+    <button _ngcontent-fxv-c10 mat-raised-button="" color="danger">Delete</button>
+  </div>
+  <div class="row">
+    <app-sms-editor></app-sms-editor>
+  </div>
+  <div class="row">
+    <app-chat-historic></app-chat-historic>
+    <app-sms-historic></app-sms-historic>
+  </div>
 </div>
