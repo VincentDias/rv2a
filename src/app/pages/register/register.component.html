@@ -6,9 +6,9 @@
         <mat-card-content>
           <form (ngSubmit)="onSubmit()">
             <mat-form-field>
-              <input matInput placeholder="identifiant" required name="identifiant" [(ngModel)]="model.identifiant"
+              <input matInput placeholder="Login" required name="identifiant" [(ngModel)]="model.identifiant"
                 #identifiant="ngModel">
-              <mat-error *ngIf="identifiant.invalid">Identifiant is required</mat-error>
+              <mat-error *ngIf="identifiant.invalid">Login is required</mat-error>
               <mat-icon matsuffix>email</mat-icon>
             </mat-form-field>
             <mat-form-field>
