@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', component: RegisterComponent },
   { path: 'home', component: TableComponent },
   { path: 'chat/:id', component: ChatComponent },
-  { path: 'details/:id', component: PatientDetailsComponent }
+  { path: 'detail/:id', component: PatientDetailsComponent }
 
 
 ];
