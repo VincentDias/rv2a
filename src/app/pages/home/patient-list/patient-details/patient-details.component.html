@@ -9,16 +9,16 @@
     </h2>
   </div>
   <div class="row">
-    address
+    Phone number: {{patients.phoneNumber}}
   </div>
   <div class="row">
     Social security number: {{patients.socialSecurityNo}}
   </div>
   <div class="row">
     <button _ngcontent-fxv-c10 mat-raised-button="" color="primary" routerLink="/chat/{{patients.id}}">Chat</button>
-    <button _ngcontent-fxv-c10 mat-raised-button="" color="secondary" routerLink="/chat">Back</button>
-    <button _ngcontent-fxv-c10 mat-raised-button="" color="warning">Modify</button>
-    <button _ngcontent-fxv-c10 mat-raised-button="" color="danger">Delete</button>
+    <button _ngcontent-fxv-c10 mat-raised-button="" color="secondary" routerLink="/home">Back</button>
+    <button _ngcontent-fxv-c10 mat-raised-button="" color="warning" routerLink="">Modify</button>
+    <button _ngcontent-fxv-c10 mat-raised-button="" color="danger" routerLink="/home">Delete</button>
   </div>
   <div class="row">
     <app-sms-editor></app-sms-editor>
