@@ -9,7 +9,7 @@ export class PatientService {
 
   constructor(private http: HttpClient) { }
 
-  private url = 'http://localhost:8081/';
+  private url = 'http://localhost:8080/';
 
   getPatients() {
     return this.http.get(this.url + 'patients');

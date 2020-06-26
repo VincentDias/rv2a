@@ -10,8 +10,8 @@ import { TableComponent } from './pages/home/patient-list/table/table.component'
 const routes: Routes = [
   { path: '', component: RegisterComponent },
   { path: 'home', component: TableComponent },
-  { path: 'chat', component: ChatComponent },
-  { path: 'details', component: PatientDetailsComponent }
+  { path: 'chat/:id', component: ChatComponent },
+  { path: 'details/:id', component: PatientDetailsComponent }
 
 
 ];
