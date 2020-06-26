@@ -6,10 +6,8 @@ import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './pages/home/patient-list/table/table.component';
-import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { SignUpComponent } from './pages/login/sign-up/sign-up.component';
 import { PatientListComponent } from './pages/home/patient-list/patient-list.component';
 import { ChatComponent } from './pages/home/patient-list/chat/chat.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,8 +23,6 @@ import { SmsEditorComponent } from './pages/home/patient-list/patient-details/sm
     AppComponent,
     PatientListComponent,
     TableComponent,
-    LoginComponent,
-    SignUpComponent,
     ChatComponent,
     PatientDetailsComponent,
     ChatHistoricComponent,
