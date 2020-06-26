@@ -47,7 +47,7 @@
       Patient details
     </mat-header-cell>
     <mat-cell *matCellDef="let element">
-      <a routerLink="details" [state]="{ id: element.id }" routerlinkactive="active">Details</a>
+      <a routerLink="details" routerLink="/chat/{{element.id}}" routerlinkactive="active">Details</a>
     </mat-cell>
   </ng-container>
 
